@@ -124,6 +124,7 @@ const updateStop = async (req, res) => {
         }
 
         const stopIndex = train.stops.findIndex(stop => stop._id.toString() === stopId);
+        console.log("stopIndex",train)
 
         if (stopIndex === -1) {
             return res.status(404).json({
